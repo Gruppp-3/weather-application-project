@@ -175,6 +175,7 @@
         android:text="Sunny %"
         android:textStyle="bold"
         android:textSize="28sp"
+
         />
 
     
