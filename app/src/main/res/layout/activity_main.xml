@@ -193,6 +193,7 @@
         android:hint="Enter City Name"
         />
 
+
     <Button
         android:id="@+id/fetchWeatherButton"
         android:layout_width="match_parent"
