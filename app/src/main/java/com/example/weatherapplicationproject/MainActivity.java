@@ -2,13 +2,13 @@ package com.example.weatherapplicationproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private TextView  tempText, humText, descText, windText;
+    private ImageView weatherIcon;
+    private Button refreshButton;
+    private EditText cityNameInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
