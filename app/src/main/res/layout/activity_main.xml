@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/urbanist"
-        android:text="City"
+        android:text="Sundsvall"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
@@ -44,7 +44,7 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_below="@+id/tempText"
-        android:background="#85C7DE"
+        android:background="#40534C"
         android:padding="10dp"
         >
 
@@ -62,7 +62,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
-                android:src="@drawable/hum">
+                android:src="@drawable/img_4">
             </ImageView>
 
 
@@ -70,7 +70,7 @@
                 android:id="@+id/humText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="60%"
+                android:text="6 mm"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -172,38 +172,24 @@
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/urbanist"
-        android:text="Sunny"
+        android:text="Sunny %"
         android:textStyle="bold"
         android:textSize="28sp"
         />
 
     
-    <EditText
-        android:id="@+id/cityNameInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/humiText"
-        android:textColor="#EFEFEF"
-        android:padding="12dp"
-        android:textColorHint="#BFBFBF"
-        android:gravity="center"
-        android:fontFamily="@font/urbanist"
-        android:textSize="24sp"
-        android:layout_marginTop="40dp"
-        android:hint="Enter City Name"
-        />
+
 
 
     <Button
         android:id="@+id/fetchWeatherButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cityNameInput"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="590dp"
         android:fontFamily="@font/urbanist"
-        android:text="Change City"
+        android:text="Refresh Weather"
         android:textSize="20sp"
-        android:backgroundTint="#85C7DE"
+        android:backgroundTint="#40534C"
         android:textStyle="bold" />
 
 
