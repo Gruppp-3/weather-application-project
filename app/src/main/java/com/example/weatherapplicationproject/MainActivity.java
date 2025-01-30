@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
         descText = findViewById(R.id.descText);
         windText = findViewById(R.id.windText);
 
