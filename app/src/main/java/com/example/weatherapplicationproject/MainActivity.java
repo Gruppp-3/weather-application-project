@@ -7,13 +7,17 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+import com.example.weatherapplicationproject.model.ForecastListener;
 import com.example.weatherapplicationproject.model.WeatherApi;
 import com.example.weatherapplicationproject.model.WeatherForecast;
 
 import org.json.JSONObject;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity implements ForecastListener
+{
+    WeatherApi api = new WeatherApi();
+    WeatherForecast forecast = api.callWeatherAPI();
     private TextView tempText, humText, descText, windText;
     private ImageView weatherIcon;
     private Button refreshButton;
@@ -27,25 +31,30 @@ public class MainActivity extends AppCompatActivity {
         descText = findViewById(R.id.descText);
         windText = findViewById(R.id.windText);
 
-        //api = new WeatherApi();
-
+        api = new WeatherApi();
+        api.setForecastListener(this);
         updateCloudiness("Sunny %");
-
+        updateWind(windVal," km/h");
     }
 
-    private void updateCloudiness(String description){
+    private void updateCloudiness(String description) {
         if (descText != null) descText.setText(description);
 
     }
+    double windVal = forecast.getWindSpeed();
 
-    private void updateWind(String desWind) {
+    private void updateWind(double windVal, String description) {
         if (windText != null) {
-            windText.setText(String.format("%.0f km/h",windSpeed));
+            windText.setText(description + windVal);
         }
     }
+
+
+    @Override
+    public void updateForecast(WeatherForecast forecast) {
+
+    }
 }
-
-
 
 
 

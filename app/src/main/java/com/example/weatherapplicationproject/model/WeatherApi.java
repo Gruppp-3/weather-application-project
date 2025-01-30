@@ -1,6 +1,9 @@
 package com.example.weatherapplicationproject.model;
 
 import android.util.Log;
+
+import com.example.weatherapplicationproject.MainActivity;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.IOException;
@@ -10,6 +13,7 @@ import java.util.Scanner;
 
 public class WeatherApi {
     private static final String TAG = "WeatherAPI";
+    private ForecastListener listener;
 
     public WeatherForecast callWeatherAPI() {
         HttpURLConnection connection = null;
@@ -78,7 +82,8 @@ public class WeatherApi {
                 .getDouble("precipitation_amount");
 
         // Create and return forecast object
-        return new WeatherForecast(temperature, windSpeed, rain1Hour, rain6Hours, cloudiness);
+        WeatherForecast result =  new WeatherForecast(temperature, windSpeed, rain1Hour, rain6Hours, cloudiness);
+        listener.updateForecast(result);
     }
 
     private String readApiResponse(HttpURLConnection apiConnection) {
@@ -101,5 +106,9 @@ public class WeatherApi {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public void setForecastListener(ForecastListener listener) {
+        this.listener = listener;
     }
 }
