@@ -70,7 +70,7 @@
                 android:id="@+id/humText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="6 mm"
+                android:text="0 mm"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -120,13 +120,13 @@
             <TextView
                 android:id="@+id/windText"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10 km/h"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
+                android:layout_height="22dp"
                 android:layout_gravity="center"
-                android:fontFamily="@font/urbanist">
+                android:fontFamily="@font/urbanist"
+                android:text="0 m/s"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold">
 
             </TextView>
 
