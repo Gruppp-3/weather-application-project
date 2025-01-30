@@ -10,6 +10,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView weatherIcon;
     private Button refreshButton;
 
+    WeatherApi api = new WeatherApi();
+    WeatherForecast forecast = api.callWeatherAPI();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,9 +19,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         descText = findViewById(R.id.descText);
+        windText = findViewById(R.id.windText);
+
+        api = new WeatherApi();
 
 
         updateCloudiness("Sunny %");
+        updateWind(forecast.getWindSpeed());
 
 
     }
@@ -27,5 +33,10 @@ public class MainActivity extends AppCompatActivity {
     private void updateCloudiness(String description){
         if (descText != null) descText.setText(description);
 
+    }
+      private void updateWind(double windSpeed) {
+        if (windText != null) {
+            windText.setText(String.format("%.0f km/h", windSpeed));
+        }
     }
 }
