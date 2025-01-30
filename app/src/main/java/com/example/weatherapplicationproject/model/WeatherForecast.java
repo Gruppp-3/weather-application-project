@@ -23,7 +23,6 @@ public class WeatherForecast {
     public double getWindSpeed() {
         return windSpeed;
     }
-
     public double getRain1h() {
         return rain1h;
     }

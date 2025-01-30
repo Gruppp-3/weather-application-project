@@ -96,6 +96,7 @@ public class WeatherApi {
                 resultJson.append(scanner.nextLine());
             }
 
+
             // Close scanner to release resources
             scanner.close();
 
