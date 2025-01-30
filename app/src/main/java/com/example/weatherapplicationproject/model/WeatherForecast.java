@@ -6,6 +6,7 @@ public class WeatherForecast {
     private final double rain6h;
     private final double cloudiness;
 
+
     public WeatherForecast(double temperature, double windSpeed,
                            double rain1h, double rain6h, double cloudiness) {
         this.temperature = temperature;

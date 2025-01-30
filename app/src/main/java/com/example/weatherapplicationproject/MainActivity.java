@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements ForecastListener
     }
 
 
+
     private void updateCloudiness(String description) {
         if (descText != null) descText.setText(description);
 

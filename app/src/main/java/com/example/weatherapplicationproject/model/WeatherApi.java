@@ -97,6 +97,7 @@ public class WeatherApi {
             }
 
 
+
             // Close scanner to release resources
             scanner.close();
 
