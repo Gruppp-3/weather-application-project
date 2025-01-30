@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     private void updateWind(double windSpeed) {
         if (windText != null) {
             windText.setText(String.format("%.0f km/h", windSpeed));
